@@ -1,16 +1,16 @@
 # pip install pyaudio
 
-import pyttsx3 # type: ignore #pip install pyttsx3
-import speech_recognition as sr #pip install speechRecognition
+import pyttsx3                              # type: ignore #pip install pyttsx3
+import speech_recognition as sr             #pip install speechRecognition
 import datetime
-import wikipedia #pip install wikipedia
+import wikipedia                            #pip install wikipedia
 import webbrowser
 import os
 import smtplib
 
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
-# print(voices[1].id)
+                                            # print(voices[1].id)
 engine.setProperty('voice', voices[0].id)
 
 
@@ -33,7 +33,7 @@ def wishMe():
     speak("Welcome Sir I am Jarvis. Please tell me how may I help you")       
 
 def takeCommand():
-    #It takes microphone input from the user and returns string output
+    #It takes microphone input from the user and returns string output.
 
     r = sr.Recognizer()
     with sr.Microphone() as source:
